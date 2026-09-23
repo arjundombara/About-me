@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Arjun Dombara | Computer Science & Data Science Student | Aspiring Software Developer</title>
+  <meta name="title" content="Arjun Dombara | Computer Science & Data Science Student | Aspiring Software Developer">
+  <meta name="description" content="Portfolio of Arjun Dombara, a B.Tech Computer Science & Data Science student passionate about software development, algorithms, machine learning, and practical problem solving.">
+  <meta name="keywords" content="Arjun Dombara, Software Developer, Computer Science, Data Science, Portfolio, Machine Learning, Python, Java, Web Development, Optimization">
+  <meta name="author" content="Arjun Dombara">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arjundombara.github.io/">
+  <meta property="og:title" content="Arjun Dombara | Computer Science & Data Science Student">
+  <meta property="og:description" content="Portfolio of Arjun Dombara - Aspiring Software Developer passionate about algorithms, machine learning, and building practical technology solutions.">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Arjun Dombara | Computer Science & Data Science Student">
+  <meta property="twitter:description" content="Portfolio of Arjun Dombara - Aspiring Software Developer passionate about algorithms, machine learning, and building practical technology solutions.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 CDN for modern developer icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Canvas Background for subtle animated ambient particle effect -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="container navbar-container">
+      <a href="#home" class="nav-logo" aria-label="Arjun Dombara Home">
+        <span class="logo-name">Arjun Dombara</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon moon-icon"></i>
+          <i class="fa-solid fa-sun theme-icon sun-icon"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <span class="logo-name">Arjun Dombara</span>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="#home" class="drawer-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#about" class="drawer-nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="#skills" class="drawer-nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+      <li><a href="#projects" class="drawer-nav-link"><i class="fa-solid fa-layer-group"></i> Projects</a></li>
+      <li><a href="#achievements" class="drawer-nav-link"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
+      <li><a href="#contact" class="drawer-nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Welcome to my digital space</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Arjun Dombara</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Computer Science &amp; Data Science Student <span class="divider-pipe">|</span> <span class="role-highlight">Aspiring Software Developer</span>
+          </p>
+
+          <p class="hero-intro">
+            I am a Computer Science &amp; Data Science student passionate about software development, data science, machine learning, and building practical solutions to real-world problems.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <span class="social-label">Connect:</span>
+            <a href="https://github.com/arjundombara" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/arjun-dombara-29a6b6389/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://leetcode.com/u/Arjun_Dombara/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LeetCode Profile">
+              <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="mailto:arjundombara@gmail.com" class="social-link" aria-label="Email Arjun Dombara">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Developer-themed Visual Terminal -->
+        <div class="hero-visual">
+          <div class="code-terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">
+                <i class="fa-solid fa-terminal"></i> developer_profile.py
+              </div>
+              <div class="terminal-status">Python 3.11</div>
+            </div>
+            <div class="terminal-body">
+              <pre><code class="code-content"><span class="c-keyword">class</span> <span class="c-class">Developer</span>:
+    <span class="c-keyword">def</span> <span class="c-func">__init__</span>(<span class="c-param">self</span>):
+        <span class="c-param">self</span>.name = <span class="c-string">"Arjun Dombara"</span>
+        <span class="c-param">self</span>.degree = <span class="c-string">"B.Tech in CS &amp; Data Science"</span>
+        <span class="c-param">self</span>.passions = [
+            <span class="c-string">"Software Development"</span>,
+            <span class="c-string">"Data Science &amp; ML"</span>,
+            <span class="c-string">"Network Optimization"</span>,
+            <span class="c-string">"Problem Solving"</span>
+        ]
+        <span class="c-param">self</span>.current_focus = <span class="c-string">"Disaster Relief Optimizer"</span>
+
+    <span class="c-keyword">def</span> <span class="c-func">get_mission</span>(<span class="c-param">self</span>):
+        <span class="c-keyword">return</span> <span class="c-string">"Build high-impact practical solutions"</span>
+
+<span class="c-comment"># Initializing Developer Profile</span>
+arjun = <span class="c-class">Developer</span>()
+<span class="c-func">print</span>(<span class="c-string">f"Status: Ready to build and innovate! 🚀"</span>)<span class="typing-cursor">|</span></code></pre>
+            </div>
+            <div class="terminal-footer">
+              <div class="tech-chip"><i class="fa-brands fa-python"></i> Python</div>
+              <div class="tech-chip"><i class="fa-brands fa-java"></i> Java</div>
+              <div class="tech-chip"><i class="fa-solid fa-brain"></i> ML</div>
+              <div class="tech-chip"><i class="fa-solid fa-database"></i> SQL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About Section">
+        <span class="mouse-wheel"></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle-badge">
+            <i class="fa-solid fa-user-gear"></i> Get to know me
+          </div>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text Content -->
+          <div class="about-text-card">
+            <div class="about-bio">
+              <p class="about-paragraph highlight-lead">
+                I am <strong class="text-accent">Arjun Dombara</strong>, a B.Tech Computer Science &amp; Data Science student with a strong interest in software development, data science, machine learning, and modern technologies.
+              </p>
+              <p class="about-paragraph">
+                I enjoy building practical projects, solving programming problems, and continuously improving my technical skills. I am interested in understanding how technology can be used to solve real-world problems and create useful applications.
+              </p>
+              <p class="about-paragraph">
+                Currently, I am working on projects involving software development, algorithms, data science, and optimization. I am continuously learning new technologies and improving my problem-solving abilities.
+              </p>
+              <p class="about-paragraph goal-statement">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <span>My goal is to grow as a skilled software developer and work on innovative technology solutions that create real-world impact.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Highlight Pillars -->
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon-box icon-blue">
+                <i class="fa-solid fa-sitemap"></i>
+              </div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Algorithms &amp; Optimization</h3>
+                <p class="pillar-desc">Passionate about designing efficient network flow models, constraint-based systems, and clean algorithmic architectures.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box icon-purple">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Data Science &amp; Machine Learning</h3>
+                <p class="pillar-desc">Leveraging modern ML pipelines, deep learning techniques, and structured SQL analysis to turn data into actionable intelligence.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box icon-emerald">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Software Development</h3>
+                <p class="pillar-desc">Writing clean, robust code in Java, Python, and modern web stacks with strong object-oriented principles.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box icon-amber">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Real-World Problem Solving</h3>
+                <p class="pillar-desc">Committed to developing practical applications like emergency supply chain distribution that deliver tangible societal impact.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle-badge">
+            <i class="fa-solid fa-microchip"></i> Technical Toolkit
+          </div>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+          <p class="section-description">A curated breakdown of the programming languages, data science frameworks, web technologies, and developer platforms I work with.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-chips-container">
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+                <span class="skill-name">Java</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-solid fa-c"></i></div>
+                <span class="skill-name">C</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                <span class="skill-name">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Data Science & AI -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h3 class="category-title">Data Science &amp; AI</h3>
+            </div>
+            <div class="skill-chips-container">
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <span class="skill-name">Machine Learning</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                <span class="skill-name">Deep Learning</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                <span class="skill-name">SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Web Technologies -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <h3 class="category-title">Web Technologies</h3>
+            </div>
+            <div class="skill-chips-container">
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                <span class="skill-name">HTML</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <span class="skill-name">CSS</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                <span class="skill-name">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools & Platforms -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <h3 class="category-title">Tools &amp; Platforms</h3>
+            </div>
+            <div class="skill-chips-container">
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+                <span class="skill-name">Git</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+                <span class="skill-name">GitHub</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-solid fa-code-branch"></i></div>
+                <span class="skill-name">VS Code</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                <span class="skill-name">Jupyter Notebook</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+                <span class="skill-name">Google Colab</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
+                <span class="skill-name">Databricks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle-badge">
+            <i class="fa-solid fa-laptop-code"></i> Featured Work
+          </div>
+          <h2 class="section-title">Featured <span class="gradient-text">Project</span></h2>
+          <p class="section-description">A spotlight on key software engineering and algorithmic optimization initiatives.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="project-showcase-wrapper">
+          <div class="project-card">
+            <div class="project-card-header">
+              <div class="project-meta-left">
+                <div class="project-type-tag">
+                  <i class="fa-solid fa-route"></i> Supply Chain &amp; Algorithms
+                </div>
+                <h3 class="project-title">Disaster Relief Supply Chain Optimizer</h3>
+              </div>
+              <div class="project-status-badge">
+                <span class="status-indicator"></span>
+                <span>🚀 Coming Soon</span>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <div class="project-description-block">
+                <p class="project-description-text">
+                  A project designed to optimize the movement and distribution of essential supplies such as food, water, and medicine from central depots to multiple disaster-affected distribution points.
+                </p>
+                
+                <div class="project-goal-callout">
+                  <i class="fa-solid fa-bullseye goal-icon"></i>
+                  <div>
+                    <strong>Core Mission &amp; Impact:</strong>
+                    <p>The goal is to improve the efficiency and fairness of relief supply distribution during large-scale disasters, minimizing delivery latency while preventing resource starvation across affected zones.</p>
+                  </div>
+                </div>
+
+                <div class="project-highlights-grid">
+                  <div class="highlight-item">
+                    <i class="fa-solid fa-diagram-project highlight-icon"></i>
+                    <div>
+                      <h4 class="highlight-title">Network Flow Algorithms</h4>
+                      <p class="highlight-desc">Applying graph-based maximum flow and minimum-cost flow models to maximize delivery throughput.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-item">
+                    <i class="fa-solid fa-weight-hanging highlight-icon"></i>
+                    <div>
+                      <h4 class="highlight-title">Capacity &amp; Route Constraints</h4>
+                      <p class="highlight-desc">Factoring vehicle payload limits, degraded road networks, and dynamic transport bottlenecks.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-item">
+                    <i class="fa-solid fa-cubes-stacked highlight-icon"></i>
+                    <div>
+                      <h4 class="highlight-title">Supply &amp; Inventory Modeling</h4>
+                      <p class="highlight-desc">Balancing multi-tier stockpile reserves across central hubs and emergency frontline depots.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-item">
+                    <i class="fa-solid fa-code highlight-icon"></i>
+                    <div>
+                      <h4 class="highlight-title">Object-Oriented Programming</h4>
+                      <p class="highlight-desc">Modular, extensible OOP architecture designed for simulation, scalability, and robust testing.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Architecture & Flow Diagram Preview -->
+              <div class="project-visual-container">
+                <div class="flow-diagram-card">
+                  <div class="flow-header">
+                    <span class="flow-label"><i class="fa-solid fa-network-wired"></i> Architecture Flow Simulation</span>
+                    <span class="flow-pill">Fair Allocation Logic</span>
+                  </div>
+                  
+                  <div class="flow-nodes">
+                    <!-- Central Depot -->
+                    <div class="flow-node node-depot">
+                      <div class="node-icon"><i class="fa-solid fa-warehouse"></i></div>
+                      <span class="node-name">Central Depots</span>
+                      <span class="node-sub">Food • Water • Meds</span>
+                    </div>
+
+                    <!-- Flow Arrow / Optimizer Engine -->
+                    <div class="flow-connector">
+                      <div class="flow-line">
+                        <span class="flow-packet"></span>
+                      </div>
+                      <div class="optimizer-badge">
+                        <i class="fa-solid fa-gear fa-spin"></i>
+                        <span>Optimizer Engine</span>
+                        <small>Network Flow &amp; Constraints</small>
+                      </div>
+                      <div class="flow-line">
+                        <span class="flow-packet"></span>
+                      </div>
+                    </div>
+
+                    <!-- Relief Distribution Points -->
+                    <div class="flow-node node-points">
+                      <div class="node-icon"><i class="fa-solid fa-tent"></i></div>
+                      <span class="node-name">Affected Points</span>
+                      <span class="node-sub">Priority Distribution</span>
+                    </div>
+                  </div>
+
+                  <div class="flow-metrics">
+                    <div class="metric-item">
+                      <span class="metric-label">Optimization Focus</span>
+                      <span class="metric-value">Max Fair Flow</span>
+                    </div>
+                    <div class="metric-item">
+                      <span class="metric-label">Constraint Type</span>
+                      <span class="metric-value">Route &amp; Capacity</span>
+                    </div>
+                    <div class="metric-item">
+                      <span class="metric-label">Distribution Mode</span>
+                      <span class="metric-value">Multi-Depot Priority</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="tech-badge-list">
+                <span class="tech-tag"><i class="fa-solid fa-diagram-project"></i> Network Flow Algorithms</span>
+                <span class="tech-tag"><i class="fa-solid fa-sliders"></i> Capacity Constraints</span>
+                <span class="tech-tag"><i class="fa-solid fa-route"></i> Route Constraints</span>
+                <span class="tech-tag"><i class="fa-solid fa-cube"></i> Object-Oriented Programming</span>
+                <span class="tech-tag"><i class="fa-solid fa-boxes-stacked"></i> Supply &amp; Inventory Modeling</span>
+                <span class="tech-tag"><i class="fa-solid fa-chart-pie"></i> Distribution Optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle-badge">
+            <i class="fa-solid fa-award"></i> Milestones &amp; Credentials
+          </div>
+          <h2 class="section-title">Achievements &amp; <span class="gradient-text">Certifications</span></h2>
+          <p class="section-description">Verified industry certifications, practical virtual internships, problem-solving milestones, and community engagement.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- IBM Cybersecurity Card -->
+          <div class="achievement-card cert-card" data-cert="ibm" tabindex="0" role="button" aria-label="View IBM Cybersecurity Fundamentals Certificate">
+            <div class="achievement-icon-wrapper ibm-theme">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-header">
+                <span class="achievement-platform">IBM SkillsBuild</span>
+                <span class="verified-pill"><i class="fa-solid fa-circle-check"></i> Verified</span>
+              </div>
+              <h3 class="achievement-title">Cybersecurity Fundamentals</h3>
+              <p class="achievement-desc">Professional excellence badge covering network security defense, threat modeling, data protection, and security fundamentals.</p>
+              <div class="cert-card-footer">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> Nov 27, 2025</span>
+                <button class="tap-view-btn" aria-label="Tap to view IBM certificate">
+                  <i class="fa-solid fa-eye"></i> Tap to view certificate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BE10X AI Tools Workshop Card -->
+          <div class="achievement-card cert-card" data-cert="be10x" tabindex="0" role="button" aria-label="View BE10X AI Tools Certificate">
+            <div class="achievement-icon-wrapper be10x-theme">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-header">
+                <span class="achievement-platform">BE10X</span>
+                <span class="verified-pill"><i class="fa-solid fa-circle-check"></i> Verified</span>
+              </div>
+              <h3 class="achievement-title">AI Tools &amp; Claude Workshop</h3>
+              <p class="achievement-desc">Certificate of Completion for high-efficiency AI workflows: data analysis in 30m, code debugging in 10m, and rapid presentations.</p>
+              <div class="cert-card-footer">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> March 1, 2026</span>
+                <button class="tap-view-btn" aria-label="Tap to view BE10X certificate">
+                  <i class="fa-solid fa-eye"></i> Tap to view certificate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- AICTE EduSkills Zscaler Zero Trust Virtual Internship Card -->
+          <div class="achievement-card cert-card" data-cert="zscaler" tabindex="0" role="button" aria-label="View Zscaler Zero Trust Virtual Internship Certificate">
+            <div class="achievement-icon-wrapper zscaler-theme">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-header">
+                <span class="achievement-platform">AICTE • EduSkills • Zscaler</span>
+                <span class="verified-pill"><i class="fa-solid fa-circle-check"></i> Verified</span>
+              </div>
+              <h3 class="achievement-title">Zero Trust Cloud Security</h3>
+              <p class="achievement-desc">10-weeks Virtual Internship in Cloud Security architecture, Zero Trust access policies, and enterprise defense frameworks.</p>
+              <div class="cert-card-footer">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> Jan – Mar 2026</span>
+                <button class="tap-view-btn" aria-label="Tap to view Zscaler certificate">
+                  <i class="fa-solid fa-eye"></i> Tap to view certificate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- LeetCode Card -->
+          <a href="https://leetcode.com/u/Arjun_Dombara/" target="_blank" rel="noopener noreferrer" class="achievement-card clickable-card">
+            <div class="achievement-icon-wrapper leetcode-theme">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-header">
+                <span class="achievement-platform">LeetCode</span>
+                <span class="card-arrow-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              </div>
+              <h3 class="achievement-title">30+ Problems Solved</h3>
+              <p class="achievement-desc">Active practice focusing on data structures, algorithmic efficiency, time complexity, and problem solving.</p>
+              <div class="cert-card-footer">
+                <span class="achievement-badge"><i class="fa-solid fa-check"></i> Verified Profile</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://www.linkedin.com/in/arjun-dombara-29a6b6389/" target="_blank" rel="noopener noreferrer" class="achievement-card clickable-card">
+            <div class="achievement-icon-wrapper linkedin-theme">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-header">
+                <span class="achievement-platform">LinkedIn</span>
+                <span class="card-arrow-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              </div>
+              <h3 class="achievement-title">300+ Connections</h3>
+              <p class="achievement-desc">Growing professional developer network, engaging with tech peers, software engineers, and industry discussions.</p>
+              <div class="cert-card-footer">
+                <span class="achievement-badge"><i class="fa-solid fa-user-group"></i> Active Network</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate Modal Viewer -->
+    <div class="cert-modal-overlay" id="cert-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-cert-title">
+      <div class="cert-modal-dialog">
+        <div class="cert-modal-header">
+          <div class="modal-header-info">
+            <div class="modal-badge-pill" id="modal-cert-issuer">Verified Certificate</div>
+            <h3 class="modal-title" id="modal-cert-title">Certificate Details</h3>
+          </div>
+          <button class="cert-modal-close" id="cert-modal-close" aria-label="Close certificate modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="cert-modal-body">
+          <!-- Visual Certificate Canvas/Renderer Card -->
+          <div class="cert-preview-card" id="cert-preview-card">
+            <!-- Dynamic Certificate View generated via JavaScript -->
+          </div>
+        </div>
+
+        <div class="cert-modal-footer">
+          <div class="modal-meta-left" id="modal-meta-details">
+            <span class="modal-meta-item"><i class="fa-solid fa-user"></i> Recipient: <strong>Dombara Arjun</strong></span>
+            <span class="modal-meta-item" id="modal-meta-date"><i class="fa-regular fa-calendar"></i> Issued: 2026</span>
+          </div>
+          <div class="modal-actions-right">
+            <a href="#" id="modal-verify-btn" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-solid fa-badge-check"></i> <span>Verify Online</span>
+            </a>
+            <a href="#" id="modal-pdf-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-file-pdf"></i> <span>Open Full PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Me Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle-badge">
+            <i class="fa-solid fa-paper-plane"></i> Let's Talk
+          </div>
+          <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+          <p class="section-description">Have a project idea, question, or opportunity? Feel free to reach out directly or send a message below.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Details -->
+          <div class="contact-info-panel">
+            <div class="contact-card-title">
+              <h3>Get in Touch</h3>
+              <p>I am open to discussions about software development, algorithms, data science, and collaboration.</p>
+            </div>
+
+            <div class="contact-items-list">
+              <a href="mailto:arjundombara@gmail.com" class="contact-item">
+                <div class="contact-item-icon email-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-item-details">
+                  <span class="item-label">Email</span>
+                  <span class="item-value">arjundombara@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+916304009024" class="contact-item">
+                <div class="contact-item-icon phone-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact-item-details">
+                  <span class="item-label">Phone</span>
+                  <span class="item-value">+91 6304009024</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/arjundombara" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-item-icon github-icon">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-item-details">
+                  <span class="item-label">GitHub</span>
+                  <span class="item-value">github.com/arjundombara</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/arjun-dombara-29a6b6389/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-item-icon linkedin-icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="contact-item-details">
+                  <span class="item-label">LinkedIn</span>
+                  <span class="item-value">linkedin.com/in/arjun-dombara</span>
+                </div>
+              </a>
+
+              <a href="https://leetcode.com/u/Arjun_Dombara/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-item-icon leetcode-icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="contact-item-details">
+                  <span class="item-label">LeetCode</span>
+                  <span class="item-value">leetcode.com/u/Arjun_Dombara</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Functional Contact Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form" novalidate>
+              <!-- Honeypot field for spam prevention -->
+              <input type="text" name="_gotcha" class="form-honeypot" style="display:none !important;" tabindex="-1" autocomplete="off">
+              
+              <!-- Hidden timestamp field -->
+              <input type="hidden" name="submission_timestamp" id="form-timestamp" value="">
+
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required autocomplete="name">
+                </div>
+                <span class="field-error" id="name-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. rahul@example.com" required autocomplete="email">
+                </div>
+                <span class="field-error" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message <span class="required">*</span></label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-solid fa-message input-icon textarea-icon"></i>
+                  <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <span class="field-error" id="message-error">Please enter your message (at least 10 characters).</span>
+              </div>
+
+              <!-- Form State Feedback Messages -->
+              <div class="form-status-alert status-success" id="form-success" role="alert" style="display: none;">
+                <i class="fa-solid fa-circle-check"></i>
+                <span class="status-text">Message sent successfully! I'll get back to you soon.</span>
+              </div>
+
+              <div class="form-status-alert status-error" id="form-error" role="alert" style="display: none;">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span class="status-text">Something went wrong. Please try again.</span>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+                <span class="btn-text">Send Message</span>
+                <i class="fa-solid fa-paper-plane btn-icon"></i>
+                <span class="btn-spinner" style="display: none;">
+                  <i class="fa-solid fa-circle-notch fa-spin"></i>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-brand-name">Arjun Dombara</span>
+        </div>
+        <p class="footer-tagline">Computer Science &amp; Data Science Student | Aspiring Software Developer</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/arjundombara" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/arjun-dombara-29a6b6389/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://leetcode.com/u/Arjun_Dombara/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LeetCode">
+          <i class="fa-solid fa-code"></i>
+        </a>
+        <a href="mailto:arjundombara@gmail.com" class="footer-social-link" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">&copy; 2026 Arjun Dombara. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
