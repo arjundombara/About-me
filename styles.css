@@ -2346,3 +2346,81 @@ img, svg {
     grid-template-columns: 1fr;
   }
 }
+
+/* --------------------------------------------------------------------------
+   PROJECT ACTION BUTTONS - refined Live Demo / Source Code links
+   -------------------------------------------------------------------------- */
+.project-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 30px 26px;
+}
+
+.project-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+              background 0.2s ease, border-color 0.2s ease,
+              color 0.2s ease;
+}
+
+.project-action i {
+  font-size: 0.95rem;
+}
+
+.project-action-primary {
+  color: #ffffff;
+  background: linear-gradient(110deg, #6366f1, #06b6d4);
+  box-shadow: 0 5px 16px rgba(99, 102, 241, 0.18);
+}
+
+.project-action-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(6, 182, 212, 0.22);
+}
+
+.project-action-secondary {
+  color: var(--text-primary);
+  background: transparent;
+  border-color: var(--bg-card-border);
+}
+
+.project-action-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary-500);
+  background: var(--pill-bg);
+  color: var(--color-primary-500);
+}
+
+.project-action:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+  .project-actions {
+    gap: 10px;
+    padding: 0 20px 22px;
+  }
+
+  .project-action {
+    min-height: 42px;
+    padding: 0 14px;
+    font-size: 0.85rem;
+  }
+}
+
